@@ -1,38 +1,70 @@
-.App {
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.gameLabel {
+  color: black;
+  font-size: 2em;
   text-align: center;
+  vertical-align: middle;
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timer {
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.scoreboard {
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.correctTarget {
+  color: #005910;
+}
+
+.incorrectTarget {
+  color: red;
+}
+
+.buttonContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  float: none;
+}
+.button {
+  border-radius: 50%;
   color: white;
+  background-color: #777777;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 5px;
+  font-size: 2em;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid black;
+}
+.activeButton {
+  background-color: #00c20a;
 }
 
-.App-link {
-  color: #61dafb;
+.submitButton {
+  width: 100px;
+  height: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonLabel {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
